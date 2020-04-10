@@ -42,12 +42,12 @@ server '18.180.125.117', user: 'sasakei', roles: %w{app db web}
 #
 # Global options
 # --------------
-set :ssh_options, keys: '~/.ssh/SAKELOG_key_rsa' 
-#  set :ssh_options, {
-#    keys: %w(/home/user_name/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+  set :ssh_options, {
+    keys: %w('~/.ssh/SAKELOG_key_rsa' ),
+    forward_agent: false,
+    auth_methods: %w(password)
+  }
+
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
