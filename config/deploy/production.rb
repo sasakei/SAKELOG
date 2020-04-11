@@ -43,7 +43,7 @@ server '18.180.125.117', user: 'sasakei', roles: %w{app db web}
 # Global options
 # --------------
   set :ssh_options, {
-    keys: %w('~/.ssh/SAKELOG_key_rsa'),
+    keys: %w(~/.ssh/SAKELOG_key_rsa), #秘密キーのpathを記載
     forward_agent: true,
     auth_methods: %w(publickey),
     port: 22
