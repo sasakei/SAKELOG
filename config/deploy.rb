@@ -21,7 +21,7 @@ set :log_level, :warn
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/master.key')
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
-# Default value for keep_releases is 5
+
 set :keep_releases, 5
 
 set :unicorn_pid, "#{shared_path}/tmp/pids/unicorn.pid"
