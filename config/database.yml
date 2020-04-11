@@ -20,7 +20,6 @@ development:
   database: SAKELOG_development
   username: root
   password: password
-  socket: /tmp/mysql.sock
   host: db
 
 # Warning: The database defined as "test" will be erased and
@@ -31,7 +30,6 @@ test:
   database: SAKELOG_test
   username: root
   password: password
-  socket: /tmp/mysql.sock
   host: db
 
 # As with config/secrets.yml, you never want to store sensitive information,
