@@ -1,3 +1,5 @@
+
+
 APP_PATH   = "#{File.dirname(__FILE__)}/.." unless defined?(APP_PATH)
 RAILS_ROOT = "#{File.dirname(__FILE__)}/.." unless defined?(RAILS_ROOT)
 RAILS_ENV  = ENV['RAILS_ENV'] || 'development'
