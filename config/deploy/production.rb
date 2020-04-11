@@ -43,9 +43,10 @@ server '18.180.125.117', user: 'sasakei', roles: %w{app db web}
 # Global options
 # --------------
   set :ssh_options, {
-    keys: %w('~/.ssh/SAKELOG_key_rsa' ),
-    forward_agent: false,
-    auth_methods: %w(password)
+    keys: %w('~/.ssh/SAKELOG_key_rsa'),
+    forward_agent: true,
+    auth_methods: %w(publickey),
+    port: 22
   }
 
 #

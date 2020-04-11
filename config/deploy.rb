@@ -9,14 +9,27 @@ set :branch, 'master'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/var/www/rails/SAKELOG'
 
-set :linked_files, fetch(:linked_files, []).push('config/settings.yml')
+
+set :rbenv_type, :user
+set :rbenv_ruby, '2.6.2'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+set :rbenv_map_bins, %w{rake gem bundle ruby rails}
+set :rbenv_roles, :all
+
+
+set :log_level, :warn
+
+
+set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/master.key')
+
+
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 # Default value for keep_releases is 5
 set :keep_releases, 5
 set :rbenv_type, :user
 set :rbenv_ruby, '2.6.2'
 
-set :log_level, :debug
+
 
 
 namespace :deploy do
