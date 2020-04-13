@@ -3,9 +3,6 @@ lock '3.13.0'
 
 set :application, 'SAKELOG'
 set :repo_url, 'github:sasakei/SAKELOG.git'
-
-# Default branch is :master
-set :branch, 'master'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, '/var/www/rails/SAKELOG'
 
@@ -22,7 +19,7 @@ set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
-set :keep_releases, 5
+set :keep_releases, 3
 
 set :unicorn_pid, "#{shared_path}/tmp/pids/unicorn.pid"
 
