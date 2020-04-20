@@ -1,0 +1,134 @@
+body{
+  font-family: Yu Mincho Light,YuMincho,Yu Mincho,游明朝体,ヒラギノ明朝 ProN,Hiragino Mincho ProN,Cambria,Optima,sans-serif;
+  color: #333333;
+  margin: 0 0;
+}
+
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/*ーーーHeaderーーー*/
+
+header{
+  height: 150px;
+  text-align: center;
+  .container{
+    width: 75vw;
+    display: inline-block;
+    padding-top: 10px;
+    /*ーーーLogoImageーーー*/
+    img{
+      padding-top: 10px;
+      height: 90px;
+      width: 90px;
+      display: inline-block;
+      float: left;
+    }
+
+    /*ーーーNavigationListsーーー*/
+    nav{
+      padding-top: 5px;
+      display: inline-block;
+      float: right;
+      ul{
+        margin: 0 0;
+        li{
+          padding-right: 8px;
+          float: left;
+          writing-mode: vertical-rl;
+          a{
+            padding: 6px 6px;
+            font-weight: bold;
+            display: inline-block;
+            transition: all .5s;
+            color: #333333;
+            &:visited{
+                color: #333333;
+            }
+            &:hover {
+              color: white;
+              background-color: #333333;
+            }
+
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
+/* ーーーTopPageーーー */
+
+.top-hero-wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("top.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color:rgba(255,255,255,0.1);
+  background-blend-mode:lighten;
+  /*img{
+    display: inline-block;
+    margin: 15px 15px;
+    height: 400px;
+    position: relative;
+    z-index: 1;
+    left: 10%;
+  }
+  .copy{
+    left: 15%;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    writing-mode: vertical-rl;
+    h1{
+      font-size: 50px;
+      letter-spacing: 5px;
+      line-height: 1.5;
+      color: #333333;
+    }
+  }*/
+}
+
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
