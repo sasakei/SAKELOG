@@ -12,6 +12,12 @@
   </head>
 
   <body>
+
+    <%# <% if notice %> %>
+      <!-- <p class="notice"><#%= notice %></p> -->
+    <%# <% elsif alert %> %>
+      <!-- <p class="alert"><#%= alert %></p> -->
+    <%# <% end %> %>
     <%# フラッシュの呼び出し %>
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
@@ -25,8 +31,8 @@
         <% end %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-             <li><%= link_to "サインイン", '#' %></li>
-             <li><%= link_to "ログイン", '#' %></li>
+             <li><%= link_to "サインイン", new_user_registration_path %></li>
+             <li><%= link_to "ログイン", new_user_session_path %></li>
              <li><%= link_to "新規投稿", '#' %></li>
              <li><%= link_to "アプリについて", '#' %></li>
           </ul>

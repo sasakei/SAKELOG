@@ -10,6 +10,15 @@ ul{
 
 a{
   text-decoration: none;
+  transition: all .5s;
+  color: #333333;
+  &:visited{
+      color: #333333;
+  }
+  &:hover {
+    color: white;
+    background-color: #333333;
+  }
 }
 
 @mixin box_sizing {
@@ -65,13 +74,9 @@ header{
           writing-mode: vertical-rl;
           a{
             padding: 6px 6px;
-            font-weight: bold;
             display: inline-block;
             transition: all .5s;
             color: #333333;
-            &:visited{
-                color: #333333;
-            }
             &:hover {
               color: white;
               background-color: #333333;
