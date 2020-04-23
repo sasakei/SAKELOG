@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'password_resets/new'
-  get 'password_resets/edit'
+  # get 'password_resets/new'
+  # get 'password_resets/edit'
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
   root 'pages#index'
