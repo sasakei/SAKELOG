@@ -15,8 +15,9 @@ class User < ApplicationRecord
   #　ーーーvalidation_for_passwordーーー
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,32}+\z/i
   has_secure_password
-  validates :password,presence: true ,
+  validates :password,presence: true ,length:{minimum: 8 }, allow_nil: true,
             format: { with: VALID_PASSWORD_REGEX }
+
 
    # 渡された文字列のハッシュ値を返す
  def User.digest(string)
