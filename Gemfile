@@ -19,6 +19,9 @@ gem 'bootstrap-sass'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 
+gem 'will_paginate',           '3.1.7'
+gem 'bootstrap-will_paginate', '1.0.0'
+
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
