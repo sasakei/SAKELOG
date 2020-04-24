@@ -3,6 +3,6 @@ class Micropost < ApplicationRecord
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
   validates :content, presence: true, length: {maximum: 140}
-  validates :title, presence: true
-  validates :image, presence: true
+  validates :title, presence: true, allow_nil: true
+  validates :image, presence: true, allow_nil: true
 end
