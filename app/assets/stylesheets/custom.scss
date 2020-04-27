@@ -42,7 +42,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-/*ーーー　container-general ーーー*/
+/*ーーーーーーーーーーーーー　container-general ーーーーーーーーーーーーー*/
 
 .container{
   width: 65vw;
@@ -66,7 +66,7 @@ textarea {
   .container{
     width: 65vw;
     padding-top: 10px;
-    /* ーーー LogoImage ーーー */
+    /* ーーーーーーーーーーーーー LogoImage ーーーーーーーーーーーーー */
     img{
       padding-top: 10px;
       height: 90px;
@@ -75,7 +75,7 @@ textarea {
       float: left;
     }
 
-    /* ーーー NavigationLists ーーー */
+    /* ーーーーーーーーーーーーー NavigationLists ーーーーーーーーーーーーー */
     nav{
       padding-top: 25px;
       float: right;
@@ -103,7 +103,7 @@ textarea {
 
 
 
-/* ーーーTopPageーーー */
+/* ーーーーーーーーーーーーー TopPage ーーーーーーーーーーーーー */
 
 .top-hero-wrapper{
   width: 100vw;
@@ -139,13 +139,13 @@ textarea {
 }
 
 
-/* ーーー　　ーーー */
+/* ーーーーーーーーーーーーー　　ーーーーーーーーーーーーー */
 
 .topic-index-wrapper{
   padding-top: 200px;
 }
 
-/* ーーー Signup_page ーーー */
+/* ーーーーーーーーーーーーー Signup_page ーーーーーーーーーーーーー */
 
 .signup_page{
   h1{
@@ -196,7 +196,7 @@ input {
 }
 
 
-/* ーーー Users index ーーー */
+/* ーーーーーーーーーーーーー Users index ーーーーーーーーーーーーー */
 
 .users {
   list-style: none;
@@ -208,39 +208,49 @@ input {
   }
 }
 
-/* ーーー Users show ーーー */
+/* ーーーーーーーーーーーーー Users show ーーーーーーーーーーーーー */
 
 .profile-area{
   padding-bottom: 10px;
   border-bottom: 2px solid #e8e8e8;
 
+/* name,profile-image,icons */
   .profile-name{
+    padding: auto;
+    text-align: center;
 
     .user-image{
+      display: block;
       img{
-        height: 50px;
-        width: 50px;
+        height: 90px;
+        width: 90px;
         border-radius: 50%;
       }
     }
 
     h1{
       display: inline-block;
-      padding-right: 25px;
     }
+
     a{
-      font-size: 30px;
+      font-size: 40px;
       &:hover{
         text-decoration: none;
       }
+
+      span{
+        font-size: 20px;
+        color: #333333;
+      }
     }
-    span{
-      font-size: 25px;
-      color: #333333;
-    }
+
   }
 
+/* follow-status, introduction */
   .profile-stats{
+    .introduction{
+      text-align: left;
+    }
     h4{
       display: inline-block;
       float: left;
@@ -249,7 +259,7 @@ input {
 }
 
 
-/*ーーー microposts ーーー*/
+/* ーーーーーーーーーーーーー microposts ーーーーーーーーーーーーー */
 
 .microposts {
   list-style: none;
@@ -263,10 +273,10 @@ input {
     padding-top: 0;
   }
   .content {
-    display: block;
+    text-align: center;
     img {
-      display: block;
-      padding: 5px 0;
+      display: inline-block;
+      padding-top: 50px;
     }
   }
   .timestamp {
@@ -276,12 +286,6 @@ input {
   }
 }
 
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
-  }
-}
 
 span.image {
   margin-top: 10px;
@@ -290,40 +294,36 @@ span.image {
   }
 }
 
-/* sidebar */
+/* ーーーーーーーーーーーーー sidebar ーーーーーーーーーーーーー */
 
 
 .stats {
   overflow: auto;
   margin-top: 0;
   padding: 0 0 4px 0;
-  a {
-    float: left;
-    padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
-    color: gray;
-    &:first-child {
-      padding-left: 0;
-      border: 0;
+  text-align: center;
+  .stats-list{
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    a {
+      float: left;
+      padding: 0 10px;
+      border-left: 1px solid $gray-lighter;
+      color: gray;
+      &:first-child {
+        padding-left: 0;
+        border: 0;
+      }
+      &:hover {
+        text-decoration: none;
+      }
     }
-    &:hover {
-      text-decoration: none;
-      border-bottom: 2px solid #e8e8e8;
-    }
-  }
-  strong {
-    display: block;
-  }
-}
 
-.user_avatars {
-  overflow: auto;
-  margin-top: 10px;
-  .gravatar {
-    margin: 1px 1px;
-  }
-  a {
-    padding: 0;
+    strong {
+      display: block;
+    }
+
   }
 }
 
@@ -332,7 +332,7 @@ span.image {
 }
 
 
-/* miscellaneous */
+/* ーーーーーーーーーーーーー miscellaneous ーーーーーーーーーーーーー */
 
 .debug_dump {
   clear: both;
