@@ -1,27 +1,35 @@
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= @user.name %>
-      </h1>
-    </section>
+<div class="container">
+  <div class="row profile-area">
 
-    <section class="stats">
-      <%= render 'shared/stats' %>
-    </section>
-  </aside>
+    <div class="col-md-8 profile-name">
+      <section class="user_info">
+        <h1>
+          <%= @user.name %>
+        </h1>
+        <%= link_to  edit_user_path(current_user) do %>
+        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+        <% end %>
+      </section>
+    </div>
 
-  <div class="col-md-8">
-
-    <%= render 'follow_form' if logged_in? %>
-
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
-    <% end %>
-
+    <div class="col-md-4 profile-stats">
+      <section class="stats">
+        <%= render 'shared/stats' %>
+      </section>
+      <h4>レビュー<%= @user.microposts.count %>件</h4>
+    </div>
+      <%= render 'follow_form' if logged_in? %>
   </div>
+
+
+  <div class="row">
+      <% if @user.microposts.any? %>
+        <ol class="microposts">
+          <%= render @microposts %>
+        </ol>
+        <%= will_paginate @microposts %>
+      <% end %>
+  </div>
+
+
 </div>

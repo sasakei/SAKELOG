@@ -1,11 +1,24 @@
 <%= form_for(@micropost) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
-    <span class="image">
-    <%= f.file_field :image, accept: 'image/jpeg,image/jpg,image/png' %>
-    </span>
-    <%= f.text_area :title, placeholder: "お酒の名前を入力してください" %>
-    <%= f.text_area :content, placeholder: "例：　甘口の濃口。自分好みの味でした。" %>
+
+    <div class="form-group">
+      <span class="image">
+      <%= f.label :"写真" , class:'col-form-label' %>
+      <%= f.file_field :image, accept: 'image/jpeg,image/jpg,image/png' %>
+      </span>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :"お酒の名前", class:'col-form-label' %>
+      <%= f.text_field :title, placeholder: "お酒の名前を入力してください" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :"レビュー", class:'col-form-label' %>
+      <%= f.text_area :content, placeholder: "例：　甘口の濃口。自分好みの味でした。" %>
+    </div>
+
   </div>
   <%= f.submit "投稿", class: "btn btn-primary" %>
 <% end %>
