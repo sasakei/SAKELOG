@@ -3,11 +3,17 @@
 
     <div class="col-md-8 profile-name">
       <section class="user_info">
+        <div class="user-image">
+          <%= image_tag @user.image.url %>
+        </div>
         <h1>
           <%= @user.name %>
         </h1>
         <%= link_to  edit_user_path(current_user) do %>
         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+        <% end %>
+        <%= link_to  logout_path, method: :delete, data: {confirm: "ログアウトしますか？"}  do %>
+        <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
         <% end %>
       </section>
     </div>

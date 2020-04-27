@@ -10,7 +10,7 @@ class MicropostsController < ApplicationController
   end
 
   def show
-
+    @micropost = Micropost.find(params[:id])
   end
 
   def create
@@ -31,7 +31,6 @@ class MicropostsController < ApplicationController
   end
 
   private
-
     def micropost_params
       params.require(:micropost).permit(:content, :title, :image)
     end
@@ -40,5 +39,4 @@ class MicropostsController < ApplicationController
       @micropost = current_user.microposts.find_by(id: params[:id])
       redirect_to root_url if @micropost.nil?
     end
-
 end
