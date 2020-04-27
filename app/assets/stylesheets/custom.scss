@@ -2,10 +2,9 @@
 @import "bootstrap";
 
 
-
 body{
   font-family: Yu Mincho Light,YuMincho,Yu Mincho,游明朝体,ヒラギノ明朝 ProN,Hiragino Mincho ProN,Cambria,Optima,sans-serif;
-  color: #333333;
+  color: black;
   margin: 0 0;
   padding-top: 150px;
 }
@@ -16,14 +15,8 @@ ul{
 
 a{
   text-decoration: none;
-  transition: all .5s;
-  color: #333333;
   &:visited{
       color: #333333;
-  }
-  &:hover {
-    color: white;
-    background-color: #333333;
   }
 }
 
@@ -49,16 +42,31 @@ textarea {
   margin-bottom: 10px;
 }
 
-/*ーーーHeaderーーー*/
+/*ーーー　container-general ーーー*/
+
+.container{
+  width: 65vw;
+  text-align: center;
+}
+
+.row{
+  h1{
+    text-align: center;
+  }
+}
+
+
+
+/* ーーー Header ーーー */
 
 .navbar{
   height: 140px;
   text-align: center;
   background-color: white;
   .container{
-    width: 75vw;
+    width: 65vw;
     padding-top: 10px;
-    /*ーーーLogoImageーーー*/
+    /* ーーー LogoImage ーーー */
     img{
       padding-top: 10px;
       height: 90px;
@@ -67,9 +75,9 @@ textarea {
       float: left;
     }
 
-    /*ーーーNavigationListsーーー*/
+    /* ーーー NavigationLists ーーー */
     nav{
-      padding-top: 5px;
+      padding-top: 25px;
       float: right;
       ul{
         margin: 0 0;
@@ -131,12 +139,13 @@ textarea {
 }
 
 
-/* ーーーusers_showーーー */
+/* ーーー　　ーーー */
+
 .topic-index-wrapper{
   padding-top: 200px;
 }
 
-/* ーーーusers_newーーー */
+/* ーーー Signup_page ーーー */
 
 .signup_page{
   h1{
@@ -187,7 +196,7 @@ input {
 }
 
 
-/* Users index */
+/* ーーー Users index ーーー */
 
 .users {
   list-style: none;
@@ -199,15 +208,43 @@ input {
   }
 }
 
+/* ーーー Users show ーーー */
 
-/* microposts */
+.profile-area{
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e8e8e8;
+
+  .profile-name{
+
+    h1{
+      display: inline-block;
+      padding-right: 25px;
+    }
+    a{
+      font-size: 30px;
+    }
+    span{
+      font-size: 25px;
+    }
+  }
+
+  .profile-stats{
+    h4{
+      display: inline-block;
+      float: left;
+    }
+  }
+}
+
+
+/*ーーー microposts ーーー*/
 
 .microposts {
   list-style: none;
   padding: 0;
   li {
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
+
   }
   .user {
     margin-top: 5em;
@@ -215,7 +252,6 @@ input {
   }
   .content {
     display: block;
-    margin-left: 60px;
     img {
       display: block;
       padding: 5px 0;
@@ -226,11 +262,6 @@ input {
     display: block;
     margin-left: 60px;
   }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
-  }
 }
 
 aside {
@@ -240,7 +271,7 @@ aside {
   }
 }
 
-span.picture {
+span.image {
   margin-top: 10px;
   input {
     border: 0;
@@ -253,7 +284,7 @@ span.picture {
 .stats {
   overflow: auto;
   margin-top: 0;
-  padding: 0;
+  padding: 0 0 4px 0;
   a {
     float: left;
     padding: 0 10px;
@@ -265,7 +296,7 @@ span.picture {
     }
     &:hover {
       text-decoration: none;
-      color: white;
+      border-bottom: 2px solid #e8e8e8;
     }
   }
   strong {
