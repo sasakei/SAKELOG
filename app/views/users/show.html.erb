@@ -4,7 +4,11 @@
     <div class="col-md-4 profile-name">
       <section class="user_info">
         <div class="user-image">
-          <%= image_tag @user.image.url %>
+          <% if @user.image? %>
+              <%= image_tag @user.image.url %>
+          <% else %>
+              <%= image_tag 'default.png' %>
+          <% end %>
         </div>
         <h1>
           <%= @user.name %>
