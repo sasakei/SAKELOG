@@ -216,15 +216,27 @@ input {
 
   .profile-name{
 
+    .user-image{
+      img{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+    }
+
     h1{
       display: inline-block;
       padding-right: 25px;
     }
     a{
       font-size: 30px;
+      &:hover{
+        text-decoration: none;
+      }
     }
     span{
       font-size: 25px;
+      color: #333333;
     }
   }
 
