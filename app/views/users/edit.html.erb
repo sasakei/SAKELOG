@@ -1,17 +1,21 @@
 <% provide(:button_text, '保存') %>
 <% provide(:path, user_path(current_user)) %>
 
-<div class="row">
+<div class="container">
+  <div class="row">
   <h1>プロフィール設定</h1>
-  <div class="col-md-4 col-md-offset-4">
     <%= form_for(@user, url: user_path(current_user)) do |f| %>
     <%= render 'shared/error_messages', object: f.object %>
+    <div class="col-md-6 col-md-offset-3">
 
-      <%= f.label :"写真" , class:'col-form-label' %>
+      <%= f.label :image, '写真' , class:'col-form-label' %>
       <%= f.file_field :image, accept: 'image/jpeg,image/jpg,image/png' %>
 
       <%= f.label :name, '名前' %>
       <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :introduction, 'プロフィール' %>
+      <%= f.text_area :introduction, rows: 10, class: 'form-control', placeholder: "例：甘口・濃口が好みです。" %>
 
       <%= f.label :email, 'メールアドレス' %>
       <%= f.email_field :email, class: 'form-control' %>
@@ -24,5 +28,6 @@
 
     <%= f.submit yield(:button_text), class: "btn btn-primary" %>
     <% end %>
+    </div>
   </div>
 </div>
