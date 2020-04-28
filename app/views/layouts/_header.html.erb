@@ -7,9 +7,21 @@
     <nav>
       <ul class="nav navbar-nav navbar-right">
           <% if logged_in? %>
-            <li><%= link_to "ユーザー一覧", users_path %></li>
-            <li><%= link_to "プロフィール", current_user %></li>
-            <li><%= link_to "新規投稿", new_micropost_path %></li>
+            <li>
+              <%= link_to users_path do%>
+              <i class="fas fa-user-friends"></i> ユーザー
+              <% end %>
+            </li>
+            <li>
+              <%= link_to current_user do%>
+                <i class="fas fa-user-circle"></i> プロフィール
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_micropost_path do%>
+              <i class="far fa-image"></i> 新規投稿
+              <% end %>
+            </li>
           <% else %>
             <li><%= link_to "サインイン", signup_path %></li>
             <li><%= link_to "ログイン", login_path %></li>
