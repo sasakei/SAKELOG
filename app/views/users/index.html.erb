@@ -1,11 +1,10 @@
-
-<h1>All users</h1>
-
-<%= will_paginate %>
-
-<ul class="users">
-  <%= render @users %>
-</ul>
-
-
-<%= will_paginate %>
+<div class="container">
+  <h1>ユーザー</h1>
+  <div class="users-index">
+    <%= will_paginate %>
+      <ul class="users">
+        <%= render @users %>
+      </ul>
+    <%= will_paginate %>
+  </div>
+</div>
