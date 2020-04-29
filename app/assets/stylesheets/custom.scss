@@ -44,12 +44,13 @@ textarea {
 
 /*ーーーーーーーーーーーーー　container-general ーーーーーーーーーーーーー*/
 
-.container{
-  width: 65vw;
-  text-align: center;
-}
+// .container{
+//   width: 65vw;
+//   text-align: center;
+// }
 
 .row{
+
   h1{
     text-align: center;
   }
@@ -166,7 +167,7 @@ textarea {
 }
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #333333;
+  border: 1px solid grey;
   width: 100%;
   margin-bottom: 15px;
   @include box_sizing;
@@ -238,7 +239,6 @@ input {
   .profile-name{
     padding: auto;
     text-align: center;
-
     .user-image{
       display: block;
       img{
@@ -262,17 +262,11 @@ input {
       }
     }
 
-  }
-
-/* follow-status, introduction */
-  .profile-stats{
     .stats {
-      padding-top: 10px;
-      overflow: auto;
-      text-align: center;
+      padding: 10px 0;
       .stats-list{
-        width: 260px;
-        height: 50px;
+        margin-left: 10px;
+        width: 100%;
         a {
           padding: 0 10px;
           border-left: 1px solid $gray-lighter;
@@ -289,13 +283,23 @@ input {
       }
     }
 
+  }
+
+/* follow-status, introduction */
+  .profile-stats{
+    text-align: center;
+    .profile-numbers{
+      padding: 20px 0;
+      h4{
+        display: inline-block;
+      }
+    }
 
     .introduction{
-      text-align: left;
-    }
-    h4{
       display: inline-block;
-      float: left;
+      text-align: center;
+      width: 50%;
+      height: 40%;
     }
   }
 }
@@ -315,6 +319,7 @@ input {
   padding: 0;
   li {
     padding-top: 70px;
+    text-align: center;
   }
   .user {
     margin-top: 5em;
@@ -327,7 +332,6 @@ input {
       display: inline-block;
       box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.25);
       color: #fff;
-      display: inline-block;
       margin: 0 0 1em;
       transition: all 0.3s ease 0s;
       &:hover{
@@ -371,8 +375,13 @@ span.image {
   }
 }
 
+/* ーーーーーーーーーーーーー micropost form ーーーーーーーーーーーーー */
 
-
+.upload-preview{
+  img{
+    height: 200px;
+  }
+}
 
 /* ーーーーーーーーーーーーー miscellaneous ーーーーーーーーーーーーー */
 

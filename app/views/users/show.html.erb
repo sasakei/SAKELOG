@@ -1,8 +1,6 @@
 <div class="container">
   <div class="row profile-area">
-
     <div class="col-md-4 profile-name">
-      <section class="user_info">
         <div class="user-image">
           <% if @user.image? %>
               <%= image_tag @user.image.url %>
@@ -21,25 +19,36 @@
           <i class="fas fa-sign-out-alt fa-lg"></i>
           <% end %>
         <% end %>
+        <section class="stats">
+          <%= render 'shared/stats' %>
+        </section>
         <%= render 'follow_form' if logged_in? %>
-      </section>
     </div>
 
     <div class="col-md-8 profile-stats">
-      <h4>投稿
-        <strong id="following" class="stat">
-          <%= @user.microposts.count %>
-        </strong>
-      </h4>
-      <section class="stats">
-        <%= render 'shared/stats' %>
-      </section>
+      <div class="profile-numbers">
+        <h4>
+          <i class="far fa-image"></i> 投稿
+          <strong>
+            <%= @user.microposts.count %>
+          </strong>
+          　
+        </h4>
+        <h4>
+          <%= link_to bookmarks_microposts_path do %>
+            <i class="far fa-bookmark"></i> ブックマーク
+            <strong id="bookmarks">
+              <%= @user.bookmark_microposts.count %>
+            </strong>
+          <% end %>
+        </h4>
+      </div>
       <section class="introduction">
         <%= @user.introduction %>
       </section>
     </div>
-  </div>
 
+  </div>
 
   <div class="row">
       <% if @user.microposts.any? %>
@@ -49,6 +58,4 @@
         <%= will_paginate @microposts %>
       <% end %>
   </div>
-
-
 </div>
