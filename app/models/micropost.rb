@@ -1,12 +1,18 @@
 class Micropost < ApplicationRecord
   belongs_to :user
+  has_many :bookmarks, dependent: :destroy
+
   default_scope -> { order(created_at: :desc) }
   mount_uploader :image, ImageUploader
   validates :user_id, presence: true
   validates :content, presence: true, length: {maximum: 140}
-  validates :title, presence: true, allow_nil: true
-  validates :image, presence: true, allow_nil: true
+  validates :title, presence: true
+  validates :image, presence: true
   validate :image_size
+
+  def bookmark_by?(user)
+    bookmarks.where(user_id: user.id).exists?
+  end
 
   private
 
@@ -16,5 +22,7 @@ class Micropost < ApplicationRecord
         errors.add(:image, "画像のサイズが大きすぎます")
       end
     end
+
+
 
 end

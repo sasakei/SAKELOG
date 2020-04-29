@@ -2,6 +2,10 @@ class MicropostsController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user,   only: :destroy
 
+  def index
+    @microposts = Micropost.all.includes(:user)
+  end
+
   def new
     if logged_in?
       @micropost  = current_user.microposts.build
@@ -11,6 +15,7 @@ class MicropostsController < ApplicationController
 
   def show
     @micropost = Micropost.find(params[:id])
+    @user = current_user
   end
 
   def create
@@ -28,6 +33,10 @@ class MicropostsController < ApplicationController
     @micropost.destroy
     flash[:success] = "投稿を削除しました"
     redirect_to request.referrer || root_url
+  end
+
+  def bookmarks
+    @microposts = current_user.bookmark_microposts.includes(:user)
   end
 
   private
