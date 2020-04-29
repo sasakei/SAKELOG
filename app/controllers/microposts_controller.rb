@@ -36,7 +36,8 @@ class MicropostsController < ApplicationController
   end
 
   def bookmarks
-    @microposts = current_user.bookmark_microposts.includes(:user)
+    @user = current_user
+    @microposts = current_user.bookmark_microposts.paginate(page: params[:page]).includes(:user)
   end
 
   private
