@@ -23,6 +23,7 @@
               <% end %>
             </li>
           <% else %>
+            <li><%= link_to 'ゲストログイン（閲覧用）', guest_sign_in_path, method: :post %></li>
             <li><%= link_to "サインイン", signup_path %></li>
             <li><%= link_to "ログイン", login_path %></li>
           <% end %>

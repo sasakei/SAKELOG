@@ -35,11 +35,13 @@
           　
         </h4>
         <h4>
-          <%= link_to bookmarks_microposts_path do %>
-            <i class="far fa-bookmark"></i> ブックマーク
-            <strong id="bookmarks">
-              <%= @user.bookmark_microposts.count %>
-            </strong>
+          <% if current_user? @user %>
+            <%= link_to bookmarks_microposts_path do %>
+              <i class="far fa-bookmark"></i> ブックマーク
+              <strong id="bookmarks">
+                <%= @user.bookmark_microposts.count %>
+              </strong>
+            <% end %>
           <% end %>
         </h4>
       </div>

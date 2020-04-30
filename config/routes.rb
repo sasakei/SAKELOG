@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
-  # get 'bookmarks/create'
-  # get 'bookmarks/destroy'
-  # get 'password_resets/new'
-  # get 'password_resets/edit'
+
+  root 'pages#index'
 
   get  '/signup',  to: 'users#new'
   post '/signup',  to: 'users#create'
-  root 'pages#index'
-  get '/about',     to: 'pages#about'
+
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+
+  post '/guest_sign_in', to: 'sessions#new_guest'
+
+  get '/about',     to: 'pages#about'
 
   resources :users do
    member do
