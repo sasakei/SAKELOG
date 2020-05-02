@@ -3,12 +3,21 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server '18.180.125.117', user: 'sasakei', roles: %w{app db web}
+# server '18.180.125.117', user: 'sasakei', roles: %w{app db web}
 # server "example.com", user: "deploy", roles: %w{app db web}, my_property: :my_value
 # server "example.com", user: "deploy", roles: %w{app web}, other_property: :other_value
 # server "db.example.com", user: "deploy", roles: %w{db}
 
-
+server '18.180.125.117',
+   user: "sasakei",
+   roles: %w{web db app},
+   ssh_options: {
+       port: 22,
+       keys: %w(~/.ssh/SAKELOG_key_rsa),
+       forward_agent: true
+#     auth_methods: %w(publickey password)
+#     # password: "please use keys"
+   }
 
 # role-based syntax
 # ==================
@@ -42,12 +51,15 @@ server '18.180.125.117', user: 'sasakei', roles: %w{app db web}
 #
 # Global options
 # --------------
-  set :ssh_options, {
-    keys: %w(~/.ssh/SAKELOG_key_rsa), #秘密キーのpathを記載
-    forward_agent: true,
-    auth_methods: %w(publickey),
-    port: 22
-  }
+
+
+  # set :ssh_options, {
+  #   keys: %w(~/.ssh/SAKELOG_key_rsa), #秘密キーのpathを記載
+  #   forward_agent: true,
+  #   auth_methods: %w(publickey),
+  #   port: 22
+  # }
+
 
 #
 # The server-based syntax can be used to override options:
