@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row profile-area">
-    <div class="col-md-4 profile-name">
+    <div class="col-md-6 profile-name">
         <div class="user-image">
           <% if @user.image? %>
               <%= image_tag @user.image.url %>
@@ -25,7 +25,7 @@
         <%= render 'follow_form' if logged_in? %>
     </div>
 
-    <div class="col-md-8 profile-stats">
+    <div class="col-md-6 profile-stats">
       <div class="profile-numbers">
         <h4>
           <i class="far fa-image"></i> 投稿

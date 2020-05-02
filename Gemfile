@@ -23,6 +23,7 @@ gem 'jquery-turbolinks'
 gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
 
+gem 'bootsnap', '>= 1.1.0', require: false
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -42,6 +43,7 @@ group :development, :test do
 
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
   gem 'rails-controller-testing'
 
   gem 'faker', '~> 2.8'
