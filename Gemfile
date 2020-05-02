@@ -25,9 +25,6 @@ gem 'bootstrap-will_paginate', '1.0.0'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
-
 
 group :development, :test do
 
@@ -72,7 +69,7 @@ end
 
 group :production, :staging do
   gem 'unicorn'
-  gem 'fog'
+  gem 'fog-aws'
 end
 
 
