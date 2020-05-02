@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8 post-image">
+    <div class="col-md-6 post-image">
       <%= image_tag @micropost.image.url %>
     </div>
-    <div class="col-md-4 post-status" id="micropost-<%= @micropost.id %>">
+    <div class="col-md-6 post-status" id="micropost-<%= @micropost.id %>">
       <h4 class="user">
         <%= image_tag @user.image.url %>
         <%= link_to @micropost.user.name, @micropost.user %>

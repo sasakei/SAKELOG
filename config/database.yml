@@ -51,10 +51,11 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+
 production:
   <<: *default
-  database: <%= ENV['DB_NAME'] %>
-  username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['DB_PASSWORD'] %>
-  host: <%= ENV['DB_HOSTNAME'] %>
+  database: SAKELOG_production
+  username: root
+  password: h81021kei
+  host: sakelog-mysql.clqwa2idmktz.ap-northeast-1.rds.amazonaws.com
   socket: /var/lib/mysql/mysql.sock
