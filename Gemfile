@@ -70,6 +70,7 @@ end
 group :production, :staging do
   gem 'unicorn'
   gem 'fog-aws'
+  gem 'sassc', '~> 2.1.0'
 end
 
 
