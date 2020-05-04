@@ -51,15 +51,44 @@ textarea {
 }
 
 
-
 /* ーーー Header ーーー */
+
+.luxbar-menu-light {
+    background-color: white;
+    color: #333333;
+    height: 100px;
+}
+
+.luxbar-menu {
+    min-height: 100px;
+    transition: 0.6s ease;
+    width: 100%;
+}
+
+.luxbar-header{
+  height: 100px;
+}
+
+.luxbar-menu-light .luxbar-item:hover {
+    background-color: white;
+}
+
+.luxbar-item{
+  margin-top: 35px;
+  font-weight: bold;
+  a{
+    text-decoration: none;
+    padding: 10px;
+  }
+}
 
 .navbar{
   height: 110px;
+  margin-bottom: 0;
   text-align: center;
   background-color: white;
   border-bottom: 2px solid #e8e8e8;
-  .container{
+
     /* ーーーーーーーーーーーーー LogoImage ーーーーーーーーーーーーー */
     img{
       padding-top: 10px;
@@ -68,42 +97,6 @@ textarea {
       display: inline-block;
       float: left;
     }
-
-    /* ーーーーーーーーーーーーー NavigationLists ーーーーーーーーーーーーー */
-    nav{
-      padding-top: 35px;
-      float: right;
-      ul{
-        margin: 0 0;
-        li{
-          font-weight: bold;
-          padding-right: 8px;
-          float: left;
-          // writing-mode: vertical-rl;
-          a{
-            &:hover{
-              background-color: white;
-            }
-            padding: 6px 6px;
-            &::after {
-              position: absolute;
-              content: '';
-              bottom: 0;
-              left: 0;
-              width: 0;
-              height: 3px;
-              background: black;
-              transition: all 0.3s ease 0s;
-            }
-            &:hover::after {
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
-
-  }
 }
 
 

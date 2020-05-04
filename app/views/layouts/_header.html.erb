@@ -1,38 +1,46 @@
-<header class="navbar navbar-fixed-top">
+<header class="nav navbar navbar-fixed-top">
   <div class="container">
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
-        <%= link_to root_path, id: "logo" do %>
-        <%= image_tag 'SAKELOG-logo.png' %>
-        <% end %>
 
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-              <% if logged_in? %>
-                <li>
-                  <%= link_to users_path do%>
-                  <i class="fas fa-user-friends"></i> ユーザー
+      <div class="col-md-8 col-md-offset-2">
+        <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox"/>
+        <div class="luxbar-menu luxbar-menu-right luxbar-menu-light">
+            <ul class="luxbar-navigation">
+                <li class="luxbar-header">
+                  <%= link_to root_path, id: "logo" do %>
+                    <%= image_tag 'SAKELOG-logo.png' %>
                   <% end %>
+                    <label class="luxbar-hamburger luxbar-hamburger-doublespin"
+                    id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
                 </li>
-                <li>
-                  <%= link_to current_user do%>
-                    <i class="fas fa-user-circle"></i> プロフィール
-                  <% end %>
+                <% if logged_in? %>
+                  <li class="luxbar-item">
+                    <%= link_to users_path do%>
+                      <i class="fas fa-user-friends"></i> ユーザー
+                    <% end %>
+                  </li>
+                  <li class="luxbar-item">
+                    <%= link_to current_user do%>
+                      <i class="fas fa-user-circle"></i> プロフィール
+                    <% end %>
+                  </li>
+                  <li class="luxbar-item">
+                    <%= link_to new_micropost_path do%>
+                      <i class="far fa-image"></i> 新規投稿
+                    <% end %>
+                  </li>
+                <% else %>
+                <li class="luxbar-item"><%= link_to 'ゲストログイン（閲覧用）', guest_sign_in_path, method: :post %></li>
+                <li class="luxbar-item"><%= link_to "サインイン", signup_path %></li>
+                <li class="luxbar-item"><%= link_to "ログイン", login_path %></li>
+                <% end %>
+                <li class="luxbar-item">
+                  <%= link_to "アプリについて", about_path %>
                 </li>
-                <li>
-                  <%= link_to new_micropost_path do%>
-                  <i class="far fa-image"></i> 新規投稿
-                  <% end %>
-                </li>
-              <% else %>
-                <li><%= link_to 'ゲストログイン（閲覧用）', guest_sign_in_path, method: :post %></li>
-                <li><%= link_to "サインイン", signup_path %></li>
-                <li><%= link_to "ログイン", login_path %></li>
-              <% end %>
-            <li><%= link_to "アプリについて", about_path %></li>
-          </ul>
-        </nav>
+            </ul>
+        </div>
       </div>
+
     </div>
   </div>
 </header>
