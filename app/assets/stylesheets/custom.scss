@@ -6,7 +6,7 @@ body{
   font-family: 'ヒラギノ角ゴシック','Hiragino Sans','MS UI Gothic',Hiragino Mincho ProN,Cambria,Optima,sans-serif;
   color: black;
   margin: 0 0;
-  padding-top: 150px;
+  padding-top: 110px;
 }
 
 ul{
@@ -106,7 +106,7 @@ textarea {
 .top-hero-wrapper{
   width: 100vw;
   height: 100vh;
-  background-image: url("top.png");
+  background-image: image-url('top.png');
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
