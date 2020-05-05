@@ -25,7 +25,8 @@ class SessionsController < ApplicationController
     user = User.guest
     user.save if !user.id
     log_in user
-    redirect_to root_path, notice: 'ゲストユーザーとしてログインしました。'
+    flash[:success] = "ゲストユーザーとしてログインしました"
+    redirect_to root_path
   end
 
 end
