@@ -9,6 +9,11 @@ body{
   padding-top: 110px;
 }
 
+.alert{
+  position: absolute;
+  width: 100%
+}
+
 ul{
   list-style: none;
 }
@@ -44,9 +49,17 @@ textarea {
 
 /*ーーーーーーーーーーーーー　container-general ーーーーーーーーーーーーー*/
 
+.container{
+  padding-top: 60px;
+}
+.header-block{
+  padding-top: 0px;
+}
+
 .row{
-  h1{
+  h3{
     text-align: center;
+    font-weight: bold;
   }
 }
 
@@ -301,7 +314,7 @@ input {
   list-style: none;
   padding: 0;
   li {
-    padding-top: 70px;
+    padding: 70px 0 0 0;
     text-align: center;
   }
   .user {
@@ -362,6 +375,7 @@ span.image {
 
 .post-image {
   text-align: center;
+  padding: 0 0;
   img {
     display: inline-block;
     }
