@@ -53,7 +53,7 @@ textarea {
   padding-top: 60px;
 }
 .header-block{
-  padding-top: 0px;
+  padding: 0 0;
 }
 
 .row{
@@ -353,7 +353,8 @@ span.image {
 /* ーーーーーーーーーーーーー micropost show ーーーーーーーーーーーーー */
 
 .post-status{
-  float: left;
+  text-align: center;
+  padding-top: 30px;
   a{
       color: #333333;
   }
