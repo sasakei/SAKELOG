@@ -11,18 +11,6 @@ class ImageUploader < CarrierWave::Uploader::Base
     storage :fog
   end
 
-  if Rails.env.production?
-    CarrierWave.configure do |config|
-      config.fog_credentials = {
-        :provider              => 'AWS',
-        :region                => 'ap-northeast-1',  # S3に設定したリージョン。
-        :aws_access_key_id     => Rails.application.credentials.aws[:access_key_id],
-        :aws_secret_access_key => Rails.application.credentials.aws[:secret_access_key]
-      }
-      config.fog_directory     =  'sakelog-bucket'
-    end
-  end
-
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
