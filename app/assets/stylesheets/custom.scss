@@ -135,38 +135,30 @@ footer{
 
 /* ーーーーーーーーーーーーー TopPage ーーーーーーーーーーーーー */
 
-.top-hero-wrapper{
-  width: 100vw;
-  height: 100vh;
-  background-image: image-url('top.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color:rgba(255,255,255,0.1);
-  background-blend-mode:lighten;
-  /*img{
-    display: inline-block;
-    margin: 15px 15px;
-    height: 400px;
-    position: relative;
-    z-index: 1;
-    left: 10%;
-  }
-  .copy{
-    left: 15%;
-    display: inline-block;
-    position: absolute;
-    z-index: 2;
-    writing-mode: vertical-rl;
-    h1{
-      font-size: 50px;
-      letter-spacing: 5px;
-      line-height: 1.5;
-      color: #333333;
-    }
-  }*/
+.copy-block{
+  height: 550px
 }
+
+.copy-logo{
+    position: fixed;
+    opacity: 0.2;
+    img{
+      width: 100%;
+    }
+}
+
+.copy{
+  position: absolute;
+  writing-mode: vertical-rl;
+  h1{
+    font-size: 50px;
+    letter-spacing: 5px;
+    line-height: 1.5;
+    color: black;
+    font-weight: bold;
+  }
+}
+
 
 
 /* ーーーーーーーーーーーーー　　ーーーーーーーーーーーーー */
