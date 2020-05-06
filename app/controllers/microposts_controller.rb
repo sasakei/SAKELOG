@@ -35,6 +35,20 @@ class MicropostsController < ApplicationController
     redirect_to current_user
   end
 
+  def edit
+    @micropost = Micropost.find(params[:id])
+  end
+
+  def update
+    @micropost = Micropost.find(params[:id])
+    if @micropost.update_attributes!(micropost_params)
+      flash[:success] = "投稿を更新しました"
+      redirect_to @micropost
+    else
+      render 'edit'
+    end
+  end
+
   def bookmarks
     @user = current_user
     @microposts = current_user.bookmark_microposts.paginate(page: params[:page]).includes(:user)

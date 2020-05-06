@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <h3>投稿の編集</h3>
+    <div class="col-md-4 col-md-offset-4">
+
+      <%= form_for(@micropost) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <div class="field">
+          
+          <div class="form-group">
+            <%= f.label :"お酒の名前", class:'col-form-label' %>
+            <%= f.text_field :title, placeholder: "お酒の名前を入力してください" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :"レビュー", class:'col-form-label' %>
+            <%= f.text_area :content, rows: 10, placeholder: "例：　甘口の濃口。自分好みの味でした。" %>
+          </div>
+
+        </div>
+        <%= f.submit "投稿", class: "btn btn-primary" %>
+      <% end %>
+
+    </div>
+  </div>
+</div>
