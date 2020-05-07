@@ -1,7 +1,21 @@
 <li class="col-md-6" id="micropost-<%= micropost.id %>">
   <span class="content">
     <%= link_to micropost_path(micropost) do %>
-    <%= image_tag micropost.image.url %>
+      <%= image_tag micropost.image.url, class: "micropost-image" %>
+
+      <div class="feeds-bookmark-btn" id="bookmark_btn_<%= micropost.id %>">
+        <% if !micropost.bookmark_by?(current_user) %>
+          <%= link_to micropost_bookmarks_path(micropost), method: :post, remote: true do%>
+           <i class="far fa-bookmark fa-2x"></i>
+          <% end %>
+        <% else %>
+          <%= link_to micropost_bookmarks_path(micropost), method: :delete, remote: true do%>
+           <i class="fas fa-bookmark fa-2x"></i>
+          <% end %>
+        <% end %>
+      </div>
+      
     <% end %>
+
   </span>
 </li>

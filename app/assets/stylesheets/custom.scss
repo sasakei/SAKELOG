@@ -135,6 +135,10 @@ footer{
 
 /* ーーーーーーーーーーーーー TopPage ーーーーーーーーーーーーー */
 
+.top-page-wrapper{
+  padding-top: 25px;
+}
+
 .copy-block{
   height: 550px
 }
@@ -160,12 +164,6 @@ footer{
 }
 
 
-
-/* ーーーーーーーーーーーーー　　ーーーーーーーーーーーーー */
-
-.topic-index-wrapper{
-  padding-top: 200px;
-}
 
 /* ーーーーーーーーーーーーー Signup_page ーーーーーーーーーーーーー */
 
@@ -220,6 +218,8 @@ input {
 
 /* ーーーーーーーーーーーーー Users index ーーーーーーーーーーーーー */
 .users-index{
+  margin-top: 30px;
+  border-top: 2px solid #e8e8e8;
   text-align: left;
   .users {
     list-style: none;
@@ -259,6 +259,10 @@ input {
 
     h3{
       display: inline-block;
+    }
+
+    .fa-sign-out-alt{
+      padding-left: 3px;
     }
 
     a{
@@ -321,6 +325,10 @@ input {
 
 /* ーーーーーーーーーーーーー microposts ーーーーーーーーーーーーー */
 
+.microposts-index-wrapper{
+  margin-top: 60px;
+  border-top: 2px solid #e8e8e8;
+}
 .microposts {
   list-style: none;
   padding: 0;
@@ -328,36 +336,37 @@ input {
     padding: 70px 0 0 0;
     text-align: center;
   }
-  .user {
-    margin-top: 5em;
-    padding-top: 0;
-  }
   .content {
-    text-align: center;
-    img {
-      border: 2px solid #333333;
+    display:inline-block;
+    position: relative;
+    border: 2px solid #333333;
+    box-shadow: 2px 2px 3px gray;
+    transition: all 0.1s ease 0s;
+    &:hover{
+      box-shadow: 5px 5px;
+      transform: translate(-0.4em) translateY(-0.4em);
+    }
+
+    .micropost-image {
+      position: relative;
+    }
+
+    .feeds-bookmark-btn{
+      box-shadow: 2px 2px 3px black;
+      border-bottom: 2px solid #333333;
+      border-left: 2px solid #333333;
+      width: 40px;
+      height: 40px;
+      padding-top: 6px;
+      position: absolute;
+      right: 0px;
       display: inline-block;
-      box-shadow: 2px 2px 3px gray;
-      color: #333333;
-      transition: all 0.2s ease 0s;
-      &:hover{
-        box-shadow: 4px 4px;
-        transform: translate(-0.3em) translateY(-0.3em) ;
+      background-color: white;
+      a{
+        color: #333333;
       }
     }
-  }
-  .timestamp {
-    color: $gray-light;
-    display: block;
-    margin-left: 60px;
-  }
-}
 
-
-span.image {
-  margin-top: 10px;
-  input {
-    border: 0;
   }
 }
 
