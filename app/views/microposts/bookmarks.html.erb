@@ -1,11 +1,13 @@
 <div class="container">
   <div class="row">
-    <h3>ブックマーク</h3>
-      <% if @user.bookmark_microposts.any? %>
-        <ol class="microposts">
-          <%= render @microposts %>
-        </ol>
-        <%= will_paginate @microposts %>
-      <% end %>
+    <div class="col-md-8 col-md-offset-2">
+      <h3>ブックマーク</h3>
+        <% if @user.bookmark_microposts.any? %>
+          <ol class="microposts">
+            <%= render @microposts %>
+          </ol>
+          <%= will_paginate @microposts %>
+        <% end %>
+    </div>
   </div>
 </div>
