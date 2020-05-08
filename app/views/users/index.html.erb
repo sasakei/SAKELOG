@@ -2,11 +2,11 @@
   <div class="row">
     <h3>ユーザー</h3>
     <div class="users-index col-md-6 col-md-offset-3">
-      <%= will_paginate %>
+      <%= will_paginate :previous_label => '&lt 前へ', :next_label => '次へ &gt' %>
         <ul class="users">
           <%= render @users %>
         </ul>
-      <%= will_paginate %>
+      <%= will_paginate :previous_label => '&lt 前へ', :next_label => '次へ &gt' %>
     </div>
   </div>
 </div>
