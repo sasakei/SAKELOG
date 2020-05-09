@@ -31,7 +31,12 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    if current_user === User.find_by(name: 'ゲストユーザー', email: 'guest@example.com')
+      redirect_to current_user
+      flash[:danger] = "プロフィールの変更は許可されていません"
+    else
+      @user = current_user
+    end
   end
 
   def update
