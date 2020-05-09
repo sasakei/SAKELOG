@@ -2,7 +2,6 @@ class PagesController < ApplicationController
   def index
     if logged_in?
       @micropost  = current_user.microposts.build
-      @user = User.find_by(id: @micropost.user_id)
       @feed_items = current_user.feed.paginate(page: params[:page], per_page: 10)
     end
   end
