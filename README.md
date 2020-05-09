@@ -26,14 +26,14 @@ https://www.sakelog.net
   - Ruby 2.6.2
   - Rails 5.2.4
   - MySQL 5.7
-  
+
 - フロントエンド
   - html
   - Scss
   - bootstrap
   - JavaScript
   - jQuery
-  
+
 - インフラ
   - ローカル
     - Docker
@@ -51,7 +51,7 @@ https://www.sakelog.net
     - Nginx
     - unicorn
 
-<img width="698" alt="スクリーンショット 2020-05-07 19 34 08" src="https://user-images.githubusercontent.com/47711244/81289327-30bc4280-90a1-11ea-8f53-9db44b5db46c.png">
+<img width="697" alt="スクリーンショット 2020-05-09 16 20 32" src="https://user-images.githubusercontent.com/47711244/81467071-199c6280-9211-11ea-90c9-4e4b20b5a5e0.png">
 
 ## 機能一覧
 
@@ -67,4 +67,3 @@ https://www.sakelog.net
   - 投稿のブックマーク機能
 - お気に入り・フォロー機能のajax化
 - お気に入りの一覧表示
-
