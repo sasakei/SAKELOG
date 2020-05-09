@@ -17,7 +17,7 @@
       </p>
 
       <div id="bookmark_btn_<%= @micropost.id %>">
-        <% if !@micropost.bookmark_by?(@user) %>
+        <% if !@micropost.bookmark_by?(current_user) %>
           <%= render 'bookmark' %>
         <% else %>
           <%= render 'unbookmark' %>
