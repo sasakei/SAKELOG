@@ -324,52 +324,59 @@ input {
 
 
 /* ーーーーーーーーーーーーー microposts ーーーーーーーーーーーーー */
-
-.microposts-index-wrapper{
-  margin-top: 60px;
-  border-top: 2px solid #e8e8e8;
+.micropost-index{
+  padding: 0 0;
 }
-.microposts {
-  list-style: none;
-  padding: 0;
-  li {
-    padding: 70px 0 0 0;
-    text-align: center;
+  .microposts-index-wrapper{
+    margin-top: 60px;
+    border-top: 2px solid #e8e8e8;
   }
-  .content {
-    display:inline-block;
-    position: relative;
-    border: 2px solid #333333;
-    box-shadow: 2px 2px 3px gray;
-    transition: all 0.1s ease 0s;
-    &:hover{
-      box-shadow: 5px 5px;
-      transform: translate(-0.4em) translateY(-0.4em);
+  .microposts {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 70px 0 0 0;
+      text-align: center;
     }
-
-    .micropost-image {
+    .content {
+      display:inline-block;
       position: relative;
-    }
-
-    .feeds-bookmark-btn{
-      box-shadow: 2px 2px 3px black;
-      border-bottom: 2px solid #333333;
-      border-left: 2px solid #333333;
-      width: 40px;
-      height: 40px;
-      padding-top: 6px;
-      position: absolute;
-      right: 0px;
-      display: inline-block;
-      background-color: white;
-      a{
-        color: #333333;
+      border: 2px solid #333333;
+      box-shadow: 2px 2px 3px gray;
+      transition: all 0.1s ease 0s;
+      &:hover{
+        box-shadow: 5px 5px;
+        transform: translate(-0.4em) translateY(-0.4em);
       }
+
+      .micropost-image {
+        position: relative;
+      }
+
+      .feeds-bookmark-btn{
+        box-shadow: 2px 2px 3px black;
+        border-bottom: 2px solid #333333;
+        border-left: 2px solid #333333;
+        width: 40px;
+        height: 40px;
+        padding-top: 6px;
+        position: absolute;
+        right: 0px;
+        display: inline-block;
+        background-color: white;
+        a{
+          color: #333333;
+        }
+      }
+
+      .user-infomation{
+        img{
+          height: 30px;
+        }
+      }
+
     }
-
   }
-}
-
 /* ーーーーーーーーーーーーー micropost show ーーーーーーーーーーーーー */
 
 .post-status{
