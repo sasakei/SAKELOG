@@ -9,9 +9,22 @@
         <%= link_to @micropost.user.name, @micropost.user %>
       </h4>
       <h2><strong><%= @micropost.title %></strong></h2>
-      <p class="content">
+      <span class="star-rate" id="star-rate-<%= @micropost.id %>"></span>
+          <script>
+          $('#star-rate-<%= @micropost.id %>').raty({
+            size: 36,
+            starOff:  '<%= asset_path('star-off.svg') %>',
+            starOn : '<%= asset_path('star-on.svg') %>',
+            starHalf: '<%= asset_path('star-half.svg') %>',
+            half: true,
+            readOnly: true,
+            score: <%= @micropost.rate %>,
+          });
+          </script>
+        <!--/星評価-->
+      <h5 class="content">
         <%= @micropost.content %>
-      </p>
+      </h5>
       <p class="timestamp">
         Posted:<%= time_ago_in_words(@micropost.created_at) %> ago.
       </p>

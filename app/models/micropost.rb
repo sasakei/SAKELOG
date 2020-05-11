@@ -9,6 +9,10 @@ class Micropost < ApplicationRecord
   validates :title, presence: true
   validates :image, presence: true
   validate :image_size
+  validates :rate, numericality: {
+    less_than_or_equal_to: 5,
+    greater_than_or_equal_to: 1
+  }, presence: true
 
   def bookmark_by?(user)
     bookmarks.where(user_id: user.id).exists?
