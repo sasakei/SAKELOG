@@ -1,5 +1,4 @@
 <!-- トップページ -->
-
 <% if logged_in? %>
   <div class="container">
     <div class="row">
@@ -14,13 +13,10 @@
 <% else %>
     <div class="container top-page-wrapper">
       <div class="row">
-        <div class="col-md-6 col-md-offset-3 copy-block">
-          <div class="copy-logo">
-            <%= image_tag 'SAKELOG-logo.png' %>
-          </div>
-          <div class="copy">
-            <h1>うまい日本酒を<br>記録しよう。</h1>
-          </div>
+        <div class="col-md-6 col-md-offset-3 copy">
+          <%= link_to( guest_sign_in_path, method: :post, class: "btn-flat-border" )  do%>
+            <h3><i class="fas fa-door-open fa-x2"></i>お試しログイン</h3>
+          <% end %>
         </div>
       </div>
     </div>
