@@ -324,6 +324,8 @@
           attrs = { 'data-alt': i, 'class': attrs.src }; // TODO: use $.data.
         }
 
+        attrs.class = 'star-image'
+
         attrs.title = methods._getHint.call(this, i);
 
         $('<' + this.opt.starType + ' />', attrs).appendTo(this);
