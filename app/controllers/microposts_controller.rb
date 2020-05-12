@@ -41,7 +41,7 @@ class MicropostsController < ApplicationController
 
   def update
     @micropost = Micropost.find(params[:id])
-    if @micropost.update_attributes!(micropost_params)
+    if @micropost.update!(micropost_params)
       flash[:success] = "投稿を更新しました"
       redirect_to @micropost
     else
