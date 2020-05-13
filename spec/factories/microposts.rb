@@ -3,6 +3,7 @@ FactoryBot.define do
     title { "MyString" }
     content { "MyText" }
     image { "MyString" }
+    rate { "5" }
     user { nil }
   end
 end
