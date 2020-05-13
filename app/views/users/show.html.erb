@@ -36,16 +36,6 @@
               </strong>
               　
             </h4>
-            <h4>
-              <% if current_user? @user %>
-                <%= link_to bookmarks_microposts_path do %>
-                  <i class="far fa-bookmark"></i> ブックマーク
-                  <strong id="bookmarks">
-                    <%= @user.bookmark_microposts.count %>
-                  </strong>
-                <% end %>
-              <% end %>
-            </h4>
           </div>
           <section class="introduction">
             <%= @user.introduction %>
@@ -61,10 +51,14 @@
     <div>
       <ul class="nav nav-tabs col-md-8 col-md-offset-2" role="tablist">
         <li class="active" role="presentation">
-          <a aria-controls="tab_a" data-toggle="tab" href="#tab_a" role="tab">自分の投稿</a>
+          <a aria-controls="tab_a" data-toggle="tab" href="#tab_a" role="tab">
+            <i class="fas fa-align-justify"></i> 自分の投稿
+          </a>
         </li>
         <li role="presentation">
-          <a aria-controls="tab_b" data-toggle="tab" href="#tab_b" role="tab">お気に入り</a>
+          <a aria-controls="tab_b" data-toggle="tab" href="#tab_b" role="tab">
+            <i class="fas fa-bookmark"></i> ブックマーク
+          </a>
         </li>
       </ul>
       <div class="tab-content">

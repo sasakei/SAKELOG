@@ -49,11 +49,6 @@ class MicropostsController < ApplicationController
     end
   end
 
-  def bookmarks
-    @user = current_user
-    @microposts = current_user.bookmark_microposts.paginate(page: params[:page]).includes(:user)
-  end
-
   private
     def micropost_params
       params.require(:micropost).permit(:content, :title, :image, :rate)
