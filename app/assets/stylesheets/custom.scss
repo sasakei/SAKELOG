@@ -253,7 +253,6 @@ input {
 
 .profile-area{
   padding-bottom: 10px;
-  border-bottom: 2px solid #e8e8e8;
 
 /* name,profile-image,icons */
   .profile-name{
@@ -330,6 +329,23 @@ input {
 
 .users.follow {
   padding: 0;
+}
+
+/* post-trandition */
+
+.nav-tabs{
+  text-align: center;
+  padding-right: 0;
+  background-color: none;
+  li{
+    display: inline-block;
+    font-weight: bold;
+    float: none;
+    width: 49%;
+    a{
+      color: black;
+      }
+    }
 }
 
 /* ーーーーーーーーーーーーー microposts rate ーーーーーーーーーーーーー */
@@ -438,7 +454,9 @@ input {
 
 
 /* ーーーーーーーーーーーーー micropost form ーーーーーーーーーーーーー */
-
+#user_img{
+  border: none;
+}
 .upload-preview{
   img{
     height: 200px;
