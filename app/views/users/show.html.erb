@@ -55,14 +55,44 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2 micropost-index">
-      <% if @user.microposts.any? %>
-        <ol class="microposts">
-          <%= render @microposts %>
-        </ol>
-        <%= will_paginate @microposts %>
-      <% end %>
+
+  <div class="post-show-area row">
+
+    <div>
+      <ul class="nav nav-tabs col-md-8 col-md-offset-2" role="tablist">
+        <li class="active" role="presentation">
+          <a aria-controls="tab_a" data-toggle="tab" href="#tab_a" role="tab">自分の投稿</a>
+        </li>
+        <li role="presentation">
+          <a aria-controls="tab_b" data-toggle="tab" href="#tab_b" role="tab">お気に入り</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="tab_a" role="tabpanel">
+          <div class="col-md-8 col-md-offset-2 micropost-index">
+
+            <% if @user.microposts.any? %>
+              <ol class="microposts">
+                <%= render @microposts %>
+              </ol>
+              <%= will_paginate @microposts %>
+            <% end %>
+
+          </div>
+        </div>
+        <div class="tab-pane" id="tab_b" role="tabpanel">
+          <div class="col-md-8 col-md-offset-2 micropost-index">
+
+            <% if @user.bookmark_microposts.any? %>
+              <ol class="microposts">
+                <%= render @favorites %>
+              </ol>
+              <%= will_paginate @favorites %>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

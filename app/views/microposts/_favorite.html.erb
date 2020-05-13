@@ -1,0 +1,26 @@
+<li class="col-md-6" id="micropost-<%= favorite.id %>">
+  <span class="content">
+    <%= link_to micropost_path(favorite) do %>
+      <%= image_tag favorite.image.url, class: "micropost-image" %>
+
+      <div class="feeds-bookmark-btn" id="bookmark_btn_<%= favorite.id %>">
+        <% if !favorite.bookmark_by?(current_user) %>
+          <%= link_to micropost_bookmarks_path(favorite), method: :post, remote: true do%>
+           <i class="far fa-bookmark fa-2x"></i>
+          <% end %>
+        <% else %>
+          <%= link_to micropost_bookmarks_path(favorite), method: :delete, remote: true do%>
+           <i class="fas fa-bookmark fa-2x"></i>
+          <% end %>
+        <% end %>
+      </div>
+
+      <h6 class="user-infomation">
+        <%= image_tag favorite.user.image.url %>
+        <strong><%= link_to favorite.user.name, favorite.user %></strong>
+      </h6>
+
+    <% end %>
+
+  </span>
+</li>
