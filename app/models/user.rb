@@ -19,7 +19,7 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   # ーーーvalidation_for_nameーーー
-  validates :name, presence: true, length: { maximum: 50 }
+  validates :name, presence: true, length: { maximum: 15 }
 
   # ーーーvalidation_for_emailーーー
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
