@@ -425,37 +425,45 @@ input {
 .post-status{
   text-align: center;
   .post-rabel{
+    padding-top: 15px;
+    display: inline-block;
     border: 4px double #333333;
+    width: 95%;
     .post-text{
       font-weight: bold;
+     }
+    .content{
+      padding: 15px 0;
+    }
+    a{
+        color: #333333;
+    }
+    div{
+      display: inline-block;
+      padding: 20px;
     }
   }
-  .content{
-    padding: 20px 0;
-  }
-  a{
-      color: #333333;
-  }
-  div{
-    display: inline-block;
-    padding: 20px;
-  }
+
   .user{
     font-weight: bold;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
     img{
       height: 30px;
       width: 30px;
       border-radius: 50%;
     }
   }
+
 }
 
 .post-image {
   text-align: center;
-  padding: 0 0;
+  padding: 0;
   img {
     display: inline-block;
+    box-shadow: 2px 2px 3px gray;
+    border: 2px solid #333333;
+    margin-bottom: 20px;
     }
   }
 
@@ -463,6 +471,14 @@ input {
 /* ーーーーーーーーーーーーー micropost form ーーーーーーーーーーーーー */
 #user_img{
   border: none;
+}
+
+#micropost_taste{
+  height: 23px;
+}
+
+#micropost_flavor{
+  height: 23px;
 }
 .upload-preview{
   img{
