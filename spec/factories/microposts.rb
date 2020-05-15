@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :micropost do
-    title { "MyString" }
-    content { "MyText" }
-    image { "MyString" }
+    title { "サンプル" }
+    content { "サンプルデータです" }
+    image { "sample.png" }
     rate { "5" }
-    user { nil }
+    user_id { 1 }
   end
 end
