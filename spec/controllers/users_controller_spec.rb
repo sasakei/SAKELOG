@@ -2,11 +2,16 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
 
-  describe "GET #new" do
-    it "returns http success" do
-      get :new
-      expect(response).to have_http_status(:success)
-    end
-  end
+  # describe "Postメソッドのcreateアクションについて" do
+  #   it "returns http success" do
+  #
+  #     context 'login' do
+  #     end
+  #
+  #     context 'not login' do
+  #     end
+  #   end
+  # end
+  # 
 
 end
