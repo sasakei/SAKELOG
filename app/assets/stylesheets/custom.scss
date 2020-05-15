@@ -424,7 +424,15 @@ input {
 
 .post-status{
   text-align: center;
-  padding-top: 30px;
+  .post-rabel{
+    border: 4px double #333333;
+    .post-text{
+      font-weight: bold;
+    }
+  }
+  .content{
+    padding: 20px 0;
+  }
   a{
       color: #333333;
   }
@@ -435,7 +443,6 @@ input {
   .user{
     font-weight: bold;
     padding-bottom: 30px;
-    border-bottom: 1px solid #e8e8e8;
     img{
       height: 30px;
       width: 30px;
