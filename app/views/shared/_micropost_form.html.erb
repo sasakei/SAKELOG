@@ -24,9 +24,29 @@
     </div>
 
     <div class="form-group star-rate" id="star">
-      <%= f.label :rate,"ランク", class:'col-form-label' %>
+      <%= f.label :rate,"評価", class:'col-form-label' %>
       <%= f.hidden_field :rate, id: :review_star %>
     </div>
+
+    <%= f.label :"テイスト", class:'col-form-label' %>
+    <%= f.select :taste,
+        [["甘口", "甘口"],
+        ["やや甘口", "やや甘口"],
+        ["中口", "中口"],
+        ["やや辛口", "やや辛口"],
+        ["辛口", "辛口"]],
+        include_blank: "選択して下さい"
+    %>
+
+    <%= f.label :"フレーバー", class:'col-form-label' %>
+    <%= f.select :flavor,
+        [["芳醇", "芳醇"],
+        ["やや芳醇", "やや芳醇"],
+        ["中口", "中口"],
+        ["やや淡麗", "やや淡麗"],
+        ["淡麗", "淡麗"]],
+        include_blank: "選択して下さい"
+    %>
 
 
     <script>
