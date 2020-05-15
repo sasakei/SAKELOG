@@ -8,26 +8,28 @@
         <%= image_tag @user.image.url %>
         <%= link_to @micropost.user.name, @micropost.user %>
       </h4>
-      <h2><strong><%= @micropost.title %></strong></h2>
-      <p><strong><%= @micropost.flavor %></strong></p>
-      <p><strong><%= @micropost.taste %></strong></p>
 
-      <span class="star-rate" id="star-rate-<%= @micropost.id %>"></span>
-          <script>
-          $('#star-rate-<%= @micropost.id %>').raty({
-            size: 36,
-            starOff:  '<%= asset_path('star-off.svg') %>',
-            starOn : '<%= asset_path('star-on.svg') %>',
-            starHalf: '<%= asset_path('star-half.svg') %>',
-            half: true,
-            readOnly: true,
-            score: <%= @micropost.rate %>,
-          });
-          </script>
-        <!--/星評価-->
-      <h5 class="content">
-        <%= @micropost.content %>
-      </h5>
+      <div class="post-rabel">
+        <h2 class="post-text"><%= @micropost.title %></h2>
+        <span class="star-rate" id="star-rate-<%= @micropost.id %>"></span>
+            <script>
+            $('#star-rate-<%= @micropost.id %>').raty({
+              size: 36,
+              starOff:  '<%= asset_path('star-off.svg') %>',
+              starOn : '<%= asset_path('star-on.svg') %>',
+              starHalf: '<%= asset_path('star-half.svg') %>',
+              half: true,
+              readOnly: true,
+              score: <%= @micropost.rate %>,
+            });
+            </script>
+          <!--/星評価-->
+        <h5 class="post-text"><%= @micropost.taste %>｜<%= @micropost.flavor %></h5>
+      </div>
+
+      <h4 class="content">
+        <strong><%= @micropost.content %></strong>
+      </h4>
       <p class="timestamp">
         Posted:<%= time_ago_in_words(@micropost.created_at) %> ago.
       </p>
