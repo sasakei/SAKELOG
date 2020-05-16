@@ -16,14 +16,14 @@ jobs:
     steps:
       - checkout
     # bundler 2+ 対応
-    - run:
-        name: setup bundler
-        command: |
-          sudo gem update --system
-          sudo gem uninstall bundler
-          sudo rm /usr/local/bin/bundle
-          sudo rm /usr/local/bin/bundler
-          sudo gem install bundler:2.1.4
+      - run:
+          name: setup bundler
+          command: |
+            sudo gem update --system
+            sudo gem uninstall bundler
+            sudo rm /usr/local/bin/bundle
+            sudo rm /usr/local/bin/bundler
+            sudo gem install bundler -v 2.1.4
 
       # Download and cache dependencies
       - restore_cache:
