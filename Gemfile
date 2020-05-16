@@ -44,7 +44,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'shoulda-matchers'
   gem 'rails-controller-testing'
-  gem 'RspecJunitFormatter'
+  gem 'rspec_junit_formatter'
 
   gem 'faker', '~> 2.8'
 
