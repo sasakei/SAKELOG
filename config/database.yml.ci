@@ -4,9 +4,8 @@
     charset: utf8mb4
     collation: utf8mb4_general_ci
     pool: 5
-    username: root
-    password: password
-    host: db
+    username: 'root'
+    host: '127.0.0.1'
     timeout: 5000
     database: SAKELOG_test
     socket: /tmp/mysql.sock
