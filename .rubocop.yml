@@ -44,6 +44,9 @@ Rails:
 Rails/SkipsModelValidations:
   Enabled: false
 
+Rails/HelperInstanceVariable:
+  Enabled: false
+
 Rails/FilePath:
   Exclude:
     - 'lib/tasks/dev.rake'
