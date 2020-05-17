@@ -8,8 +8,8 @@ jobs:
           - RAILS_ENV: 'test'
       - image: circleci/mysql:5.7
         environment:
-          MYSQL_ROOT_PASSWORD: 'password'
-          MYSQL_DATABASE: 'SAKELOG_test'
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
+          MYSQL_ROOT_HOST: '%'
 
     working_directory: ~/SAKELOG
 
@@ -40,6 +40,7 @@ jobs:
           paths: ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
+      - run: mv config/database.yml.ci config/database.yml
       # Database setup
       - run: bundle exec rake db:create
       - run: bundle exec rake db:schema:load
