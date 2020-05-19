@@ -13,7 +13,7 @@ server '18.180.125.117',
    roles: %w{web db app},
    ssh_options: {
        port: 22,
-       keys: %w(~/.ssh/SAKELOG_key_rsa),
+       keys: %w(~/.ssh/SAKELOG_key_rsa_bbaf869349036ba3fa101e4ed44f7b75),
        forward_agent: true
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
