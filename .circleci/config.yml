@@ -11,10 +11,6 @@ jobs:
         environment:
           MYSQL_ALLOW_EMPTY_PASSWORD: 'true'
           MYSQL_ROOT_HOST: '%'
-      - image: amazon/aws-cli
-        environment:
-          AWS_DEFAULT_REGION: ap-northeast-1
-          AWS_PAGER: ""
     working_directory: ~/SAKELOG
 
     steps:
@@ -75,16 +71,6 @@ jobs:
           path: /tmp/test-results
           destination: test-results
 
-
-      - run:
-          name: "authorize-security-group-ingress"
-          command: |
-            IP=`curl -s ifconfig.me`
-            echo "#!/bin/bash" > ./sg.sh
-            echo "aws configure set region ap-northeast-1" >> ./sg.sh
-            echo "aws ec2 authorize-security-group-ingress --group-id sg-0e61ab2a0a5cd8642 --protocol tcp --port 22 --cidr ${IP}/32" >> ./sg.sh
-            bash ./sg.sh
-
       - add_ssh_keys:
           fingerprints:
             - "81:8a:ec:f4:24:a8:32:4a:be:df:44:9c:6a:5a:f3:83"
@@ -96,12 +82,3 @@ jobs:
               exit 0
             fi
             bundle exec cap production deploy
-
-      - run:
-          name: "revoke-security-group-ingress"
-          command: |
-            IP=`curl -s ifconfig.me`
-            echo "#!/bin/bash" > ./sg.sh
-            echo "aws configure set region ap-northeast-1" >> ./sg.sh
-            echo "aws ec2 revoke-security-group-ingress --group-id sg-0e61ab2a0a5cd8642 --protocol tcp --port 22 --cidr ${IP}/32" >> ./sg.sh
-            bash ./sg.sh
