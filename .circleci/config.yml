@@ -72,7 +72,7 @@ jobs:
           destination: test-results
 
 
-      - run: sudo pip install awscli
+      - run: sudo gem install aws-sdk
       - run:
           name: "authorize-security-group-ingress"
           command: |
