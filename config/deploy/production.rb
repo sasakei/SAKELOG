@@ -13,10 +13,8 @@ server '18.180.125.117',
    roles: %w{web db app},
    ssh_options: {
        port: 22,
-       keys: ["#{ENV.fetch('PRODUCTION_SSH_KEY')}"],  
+       keys: ["#{ENV.fetch('PRODUCTION_SSH_KEY')}"],
        forward_agent: true
-#     auth_methods: %w(publickey password)
-#     # password: "please use keys"
    }
 
 # role-based syntax
