@@ -2,6 +2,7 @@ version: 2
 jobs:
   build:
     docker:
+      - image: circleci/python:3.6-jessie
       - image: circleci/ruby:2.6.2-node-browsers
         environment:
           - BUNDLER_VERSION: 2.1.4
@@ -72,7 +73,7 @@ jobs:
           destination: test-results
 
 
-      - run: sudo gem install aws-sdk
+      - run: sudo pip install awscli
       - run:
           name: "authorize-security-group-ingress"
           command: |
