@@ -93,14 +93,18 @@ textarea {
 }
 
 .luxbar-item{
+  display: inline-block;
+  transition: all 0.3s ease 0s;
   margin-top: 35px;
   font-weight: bold;
+  &:hover{
+    opacity: 0.6;
+  }
   a{
     text-decoration: none;
     padding: 10px;
   }
 }
-
 .navbar{
   height: 110px;
   margin-bottom: 0;
