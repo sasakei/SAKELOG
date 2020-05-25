@@ -5,10 +5,10 @@ describe MicropostsController do
     # it '投稿が新着順に表示されること' do
     # end
 
-    it 'indexテンプレートをレンダリングすること' do
-      get :index
-      expect(response).to render_template :index
-    end
+    # it 'indexテンプレートをレンダリングすること' do
+    #   get :index
+    #   expect(response).to render_template :index
+    # end
   end
 
   describe 'GET #show' do
