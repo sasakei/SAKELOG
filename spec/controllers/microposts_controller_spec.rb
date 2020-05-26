@@ -1,12 +1,11 @@
 require 'rails_helper'
 
 describe MicropostsController do
-  describe 'GET #index' do
+  describe 'GET #/' do
     # it '投稿が新着順に表示されること' do
     # end
-
     # it 'indexテンプレートをレンダリングすること' do
-    #   get :index
+    #   get :microposts
     #   expect(response).to render_template :index
     # end
   end
