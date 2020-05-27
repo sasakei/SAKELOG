@@ -18,7 +18,7 @@ https://www.sakelog.net
 - GooglemapAPIを用いた、レビューしたお酒を飲んだ場所の記録。
 - 日本酒の名前をDBに格納(もしくはAPIを利用)してサジェスト表示する。
 - Rspecを用いたテストの充実
-- CI/CDパイプラインの構築
+- フロントエンドにReactを導入
 
 等のアップデートを考えています。
 
@@ -42,6 +42,8 @@ https://www.sakelog.net
     - docker-compose
   - デプロイ
     - Capistrano
+  - CI/CD
+    - CircleCI
   - AWS
     - VPC
     - EC2

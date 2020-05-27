@@ -1,7 +1,13 @@
 <% if logged_in? %>
   <div class="container">
     <div class="row">
-      <div class="micropost-index col-md-8 col-md-offset-2">
+      <div class="micropost-search col-md-2">
+        <h3>検索</h3>
+        <div class="microposts-index-wrapper">
+          <%= render 'shared/search_form' %>
+        </div>
+      </div>
+      <div class="micropost-index col-md-8">
         <h3>タイムライン</h3>
         <div class="microposts-index-wrapper">
           <%= render 'shared/feed' %>
