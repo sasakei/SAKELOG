@@ -3,8 +3,12 @@ class BookmarksController < ApplicationController
   before_action :set_micropost, only: %i[create destroy]
 
   def create
-    @bookmark = current_user.bookmarks.build(micropost_id: params[:micropost_id])
-    @bookmark.save
+    if logged_in?
+      @bookmark = current_user.bookmarks.build(micropost_id: params[:micropost_id])
+      @bookmark.save
+    else
+      flash.now[:danger] = "ログインしてください"
+    end
   end
 
   def destroy
