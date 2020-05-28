@@ -24,6 +24,7 @@ gem 'jquery-turbolinks'
 gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
 gem 'rails-i18n'
+gem 'ransack'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
@@ -67,8 +68,6 @@ group :development do
 
   gem 'ed25519'
   gem 'bcrypt_pbkdf'
-
-  gem 'ransack'
 
 end
 

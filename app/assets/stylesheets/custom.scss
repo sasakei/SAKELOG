@@ -47,7 +47,7 @@ select {
 /*ーーーーーーーーーーーーー　container-general ーーーーーーーーーーーーー*/
 
 .container{
-  padding: 60px 15px;
+  padding: 60px 15px ;
   background-color:rgba(255,255,255,0.9);
   background-blend-mode:lighten;
   background-image: image-url('SAKELOG-logo.png');
@@ -142,13 +142,13 @@ footer{
 /* ーーーーーーーーーーーーー TopPage ーーーーーーーーーーーーー */
 
 .top-page-wrapper{
-  padding-top: 25px;
+  padding-bottom: 0;
 }
 .top-copy{
   text-align: center;
 }
 .btn-flat-border {
-  margin-top: 50px;
+  margin: auto;
   height: 100px;
   width: 100%;
   display: inline-block;

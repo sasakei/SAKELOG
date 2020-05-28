@@ -1,48 +1,29 @@
 <!-- トップページ -->
-<% if logged_in? %>
-  <div class="container">
+<% if !logged_in? %>
+  <div class="container top-page-wrapper">
     <div class="row">
-      <div class="micropost-search col-md-2">
-        <h3>検索</h3>
-        <div class="microposts-index-wrapper">
-          <%= render 'shared/search_form' %>
-        </div>
-      </div>
-      <div class="micropost-index col-md-8">
-        <h3>投稿一覧</h3>
-        <div class="microposts-index-wrapper">
-          <%= render 'shared/feed' %>
-        </div>
+      <div class="col-md-6 col-md-offset-3 copy">
+        <%= link_to( guest_sign_in_path, method: :post, class: "btn-flat-border" )  do%>
+          <h3><i class="fas fa-door-open fa-x2"></i>お試しログイン</h3>
+        <% end %>
       </div>
     </div>
   </div>
-<% else %>
-    <div class="container top-page-wrapper">
-      <div class="row top-copy">
-        <div class="col-md-8 col-md-offset-2">
-          <h3>「うまい酒が、なかなか飲めない」</h3>
-          <br></br>
-          <div class="col-md-12">
-            <p>
-              この、シンプルかつ難解な課題を解決したい。<br>
-              そんな思いから、【SAKELOG】は生まれました。<br>
-              <br>
-              友人が飲んだお酒を眺めて、お店選びの参考に。<br>
-              <br>
-              美味いお酒にまた出会えるよう、<br>
-              あなた用の備忘録に。<br>
-              <br>
-              飲兵衛のあなたに【SAKELOG】は寄り添います。<br>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3 copy">
-          <%= link_to( guest_sign_in_path, method: :post, class: "btn-flat-border" )  do%>
-            <h3><i class="fas fa-door-open fa-x2"></i>お試しログイン</h3>
-          <% end %>
-        </div>
+<% end %>
+
+<div class="container">
+  <div class="row">
+    <div class="micropost-search col-md-2">
+      <h3>検索</h3>
+      <div class="microposts-index-wrapper">
+        <%= render 'shared/search_form' %>
       </div>
     </div>
-<% end %>
+    <div class="micropost-index col-md-8">
+      <h3>投稿一覧</h3>
+      <div class="microposts-index-wrapper">
+        <%= render 'shared/feed' %>
+      </div>
+    </div>
+  </div>
+</div>
