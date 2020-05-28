@@ -3,17 +3,14 @@ class MicropostsController < ApplicationController
   before_action :correct_user,   only: [:destroy, :edit]
 
   def index
-
     @timelines = current_user.feed.paginate(page: params[:page], per_page: 10)
     @q = @timelines.ransack(params[:q])
-
     @feed_items = @q.result(distinct: true)
   end
 
   def new
     if logged_in?
       @micropost  = current_user.microposts.build
-      @feed_items = current_user.feed.paginate(page: params[:page])
     end
   end
 

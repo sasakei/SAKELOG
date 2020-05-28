@@ -24,9 +24,9 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = "ユーザー登録が完了しました"
-      # redirect_to user_url(@user)
       redirect_to @user
     else
+      flash.now[:danger] = '認証に失敗しました'
       render 'new'
     end
   end
