@@ -10,7 +10,7 @@ class MicropostsController < ApplicationController
 
   def new
     if logged_in?
-      @micropost  = current_user.microposts.build
+      @micropost = current_user.microposts.build
     end
   end
 
