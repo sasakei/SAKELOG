@@ -1,6 +1,6 @@
 <%= search_form_for @q do |f| %>
 
-  <%= f.label :'テイスト', class:'col-form-label'%>
+  <%= f.label :'テイスト', class:'col-form-label' %>
   <%= f.select :taste_eq,
       [["甘口", "甘口"],
       ["やや甘口", "やや甘口"],
@@ -11,7 +11,7 @@
   %>
 
 
-  <%= f.label :'フレーバー',  class:'col-form-label' %>
+  <%= f.label :'フレーバー',  class:'col-form-label',　id: 'micropost_taste' %>
   <%= f.select :flavor_eq,
       [["芳醇", "芳醇"],
       ["やや芳醇", "やや芳醇"],
