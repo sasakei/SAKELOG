@@ -2,9 +2,9 @@
 Ruby on Rails(5.2.4)を用いて、日本酒レビューのアプリを作成いたしました。
 シンプルなUI(投稿写真が映えるようモノトーンに統一されたデザイン)と明快なUXにこだわりました。
 
-<img width="764" alt="スクリーンショット 2020-05-12 15 09 28" src="https://user-images.githubusercontent.com/47711244/81644462-bc97eb00-9462-11ea-908c-45143878bd9a.png">
+<img width="1209" alt="スクリーンショット 2020-05-29 15 25 14" src="https://user-images.githubusercontent.com/47711244/83228184-ca6aa180-a1c0-11ea-82d5-a7b83e49b950.png">
 
-<img width="770" alt="スクリーンショット 2020-05-12 15 09 42" src="https://user-images.githubusercontent.com/47711244/81644503-d3d6d880-9462-11ea-802f-2ae89bbb7343.png">
+<img width="862" alt="スクリーンショット 2020-05-29 15 25 45" src="https://user-images.githubusercontent.com/47711244/83228147-bd4db280-a1c0-11ea-8832-62254d5fe1bb.png">
 
 # URL
 https://www.sakelog.net
@@ -55,7 +55,8 @@ https://www.sakelog.net
     - Nginx
     - unicorn
 
-<img width="697" alt="スクリーンショット 2020-05-09 16 20 32" src="https://user-images.githubusercontent.com/47711244/81467071-199c6280-9211-11ea-90c9-4e4b20b5a5e0.png">
+<img width="466" alt="スクリーンショット 2020-05-29 15 37 01" src="https://user-images.githubusercontent.com/47711244/83229056-47e2e180-a1c2-11ea-96b3-4574dbf086a7.png">
+
 
 ## 機能一覧
 
