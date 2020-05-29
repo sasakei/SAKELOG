@@ -17,6 +17,7 @@ server '18.180.125.117',
        forward_agent: true
    }
 
+# ["#{ENV.fetch('PRODUCTION_SSH_KEY')}"]
 # role-based syntax
 # ==================
 
