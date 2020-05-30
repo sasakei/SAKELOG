@@ -49,17 +49,7 @@
     %>
 
 
-    <script>
-
-    $('#star').raty({
-      size     : 36,
-      starOff:  '<%= asset_path('star-off.svg') %>',
-      starOn : '<%= asset_path('star-on.svg') %>',
-      starHalf: '<%= asset_path('star-half.svg') %>',
-      scoreName: 'micropost[rate]',
-      half: true,
-    });
-    </script>
+    <%= render 'microposts/raty_post' %>
 
     <div class="form-group">
       <%= f.label :"レビュー", class:'col-form-label' %>
