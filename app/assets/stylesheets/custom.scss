@@ -217,14 +217,16 @@ input, textarea, select, .uneditable-input {
       overflow: auto;
       padding: 10px 0;
       border-bottom: 1px solid $gray-lighter;
-      img{
-        height: 40px;
-        width: 40px;
-        border-radius: 50%;
-        margin-right: 20px;
-      }
     }
   }
+}
+
+/* ーーーーーーーー UserImage ーーーーーーーー */
+.user_image{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 3px;
 }
 
 /* ーーーーーーーーーーーーー Users show ーーーーーーーーーーーーー */
@@ -389,11 +391,6 @@ input, textarea, select, .uneditable-input {
         margin: 0;
         padding: 10px 0;
         background-color: white;
-        img{
-          height: 30px;
-          width: 30px;
-          border-radius: 50%;
-        }
       }
 
     }
@@ -426,11 +423,6 @@ input, textarea, select, .uneditable-input {
   .user{
     font-weight: bold;
     padding-bottom: 5px;
-    img{
-      height: 30px;
-      width: 30px;
-      border-radius: 50%;
-    }
   }
 
 }
