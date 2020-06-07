@@ -1,0 +1,15 @@
+<div class="comment-index">
+  <p><strong>コメント一覧</strong></p>
+  <%  @comments.each do |comment|  %>
+    <div class="comment-info">
+      <%= image_tag comment.user.image.url, class: "user_image" %>
+      <%= comment.content %>
+      <% if current_user?(comment.user)%>
+        <%= link_to comment, method: :delete do%>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+      <% end %>
+
+    </div>
+  <% end %>
+</div>

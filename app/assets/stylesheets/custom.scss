@@ -438,6 +438,18 @@ input, textarea, select, .uneditable-input {
     }
   }
 
+.comment-area{
+  padding-top: 20px;
+  .comment-index{
+    padding-top: 20px;
+    .comment-info{
+      display: block;
+      padding: 10px 0;
+      border-top: 1px solid #e8e8e8;
+    }
+  }
+}
+
 
 /* ーーーーーーーーーーーーー micropost form ーーーーーーーーーーーーー */
 #user_img{

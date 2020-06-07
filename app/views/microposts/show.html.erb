@@ -50,15 +50,9 @@
   <div class="row">
     <div class="col-md-6">
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 comment-area">
       <%= render 'comment_form' %>
-      <%  @comments.each do |comment|  %>
-        <%= image_tag comment.user.image.url, class: "user_image" %>
-        <%= comment.content %>
-        <%= link_to comment, method: :delete do%>
-          <i class="far fa-trash-alt"></i>
-        <% end %>
-      <% end %>
+      <%= render 'comment_index' %>
     </div>
   </div>
 </div>
