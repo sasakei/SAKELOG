@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
-
+  has_many :comments , dependent: :destroy
   has_many :bookmarks, dependent: :destroy
   has_many :bookmark_microposts, through: :bookmarks, source: :micropost
 

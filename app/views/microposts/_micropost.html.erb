@@ -17,7 +17,7 @@
       <% end %>
 
       <h6 class="user-infomation">
-        <%= image_tag micropost.user.image.url %>
+        <%= image_tag micropost.user.image.url, class: "user_image" %>
         <strong><%= link_to micropost.user.name, micropost.user %></strong>
       </h6>
 

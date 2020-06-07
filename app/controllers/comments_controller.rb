@@ -1,24 +1,23 @@
-class BookmarksController < ApplicationController
-  before_action :set_micropost, only: %i[create destroy]
+class CommentsController < ApplicationController
 
   def create
-    if logged_in?
-      @comment = current_user.comment.build(
-                                      content: params[:content],
-                                      micropost_id: params[:id],
-                                      user_id: current_user.id,
-                                      )
-      @comment.save
+    @comment = current_user.comments.build(comment_params)
+    if @comment.save
+      flash[:success] = 'コメントが投稿されました'
+      redirect_to @comment.micropost
     else
-      flash.now[:danger] = "ログインしてください"
+      flash[:danger] = 'コメントできません'
+      redirect_to @comment.micropost
     end
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
+    Comment.find(params[:id]).destroy
   end
 
-  private
+    private
+    def comment_params
+      params.require(:comment).permit(:content).merge(micropost_id: params[:micropost_id])
+    end
 
 end

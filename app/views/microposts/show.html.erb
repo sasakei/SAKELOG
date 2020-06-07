@@ -5,25 +5,14 @@
     </div>
     <div class="col-md-4 post-status" id="micropost-<%= @micropost.id %>">
       <div class="post-rabel">
-      <h4 class="user">
-        <%= image_tag @user.image.url %>
-        <%= link_to @micropost.user.name, @micropost.user %>
-      </h4>
+        <h4 class="user">
+          <%= image_tag @user.image.url, class: "user_image" %>
+          <%= link_to @micropost.user.name, @micropost.user %>
+        </h4>
 
         <h2 class="post-text"><%= @micropost.title %></h2>
         <span class="star-rate" id="star-rate-<%= @micropost.id %>"></span>
-            <script>
-            $('#star-rate-<%= @micropost.id %>').raty({
-              size: 36,
-              starOff:  '<%= asset_path('star-off.svg') %>',
-              starOn : '<%= asset_path('star-on.svg') %>',
-              starHalf: '<%= asset_path('star-half.svg') %>',
-              half: true,
-              readOnly: true,
-              score: <%= @micropost.rate %>,
-            });
-            </script>
-          <!--/星評価-->
+            <%= render 'raty_read' %>
         <h5 class="post-text"><%= @micropost.taste %>｜<%= @micropost.flavor %></h5>
 
 
@@ -56,6 +45,20 @@
           </div>
         <% end %>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-4">
+      <%= render 'comment_form' %>
+      <%  @comments.each do |comment|  %>
+        <%= image_tag comment.user.image.url, class: "user_image" %>
+        <%= comment.content %>
+        <%= link_to comment, method: :delete do%>
+          <i class="far fa-trash-alt"></i>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>

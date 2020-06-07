@@ -1,0 +1,9 @@
+<%= form_with(model: [@micropost, @comment], local: true) do |f| %>
+  <div class="field">
+    <div class="form-group">
+      <%= f.label :"コメント", class:'col-form-label' %>
+      <%= f.text_area :content, rows: 2 %>
+    </div>
+  </div>
+  <%= f.submit "投稿", class: "btn btn-primary" %>
+<% end %>
