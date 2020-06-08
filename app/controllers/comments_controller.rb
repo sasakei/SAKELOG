@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :redirect_login , only: %i[create destroy]
+
   def create
     @comment = current_user.comments.build(comment_params)
     if @comment.save
@@ -20,6 +22,11 @@ class CommentsController < ApplicationController
   end
 
   private
+
+    def redirect_login
+      flash[:danger] = "ログインしてください"
+      redirect_to login_path if !logged_in?
+    end
 
     def comment_params
       params.require(:comment).permit(:content).merge(micropost_id: params[:micropost_id])
