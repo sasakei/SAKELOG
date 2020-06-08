@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :redirect_login , only: %i[create destroy]
+  before_action :redirect_login, only: %i[create destroy]
 
   def create
     @comment = current_user.comments.build(comment_params)
@@ -25,7 +25,7 @@ class CommentsController < ApplicationController
 
     def redirect_login
       flash[:danger] = "ログインしてください"
-      redirect_to login_path if !logged_in?
+      redirect_to login_path unless logged_in?
     end
 
     def comment_params
