@@ -11,7 +11,7 @@ CarrierWave.configure do |config|
     config.storage = :fog
     config.fog_provider = 'fog/aws'
     config.fog_directory  = 'sakelog-bucket'
-    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/sakelog-bucket'
+    config.asset_host = 'https://sakelog-bucket.s3.amazonaws.com'
     config.fog_public = false
     config.fog_credentials = {
       provider: 'AWS',
